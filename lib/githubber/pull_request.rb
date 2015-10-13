@@ -9,8 +9,8 @@ module Githubber
     		"User-Agent" => "HTTParty"
     	}
     end
-    def get_request(owner, repo)
-    PullRequest.get("/repos/#{owner}/#{repo}/pulls",
+    def get_request(owner, repo, number)
+    PullRequest.get("/repos/#{owner}/#{repo}/pulls","#{number}"
      :headers => @auth)	
     end  
 
