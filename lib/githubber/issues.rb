@@ -11,11 +11,15 @@ module Githubber
     end
 
     def list_issues_for_repo(owner,repo,options={})
-      self.class.get("/repos/#{owner}/#{repo}/issues", :headers => @auth, :body => options.to_json)
+      self.class.get("/repos/#{owner}/#{repo}/issues",
+                     :headers => @auth,
+                     :body => options.to_json)
     end
 
-    def comment_issue
-
+    def comment_issue(owner,repo,issue,options={})
+      self.class.post("/repos/#{owner}/#{repo}/issues/#{issue}/comments",
+                      :headers => @auth,
+                      :body => options.to_json)
     end
 
     def close_issue
