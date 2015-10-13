@@ -22,8 +22,10 @@ module Githubber
                       :body => options.to_json)
     end
 
-    def close_issue
-
+    def close_issue(owner,repo,issue)
+      self.class.patch("/repos/#{owner}/#{repo}/issues/#{issue}",
+                      :headers => @auth,
+                      :body => {:state => "closed"}.to_json)
     end
 
   end
