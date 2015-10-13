@@ -10,7 +10,7 @@ module Githubber
     	}
     end
     def get_request(owner, repo, number)
-    PullRequest.get("/repos/#{owner}/#{repo}/pulls","#{number}"
+    PullRequest.get("/repos/#{owner}/#{repo}/pulls/#{number}",
      :headers => @auth)	
     end  
 
