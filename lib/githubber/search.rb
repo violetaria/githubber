@@ -4,15 +4,22 @@ module Githubber
   base_uri "https://api.github.com"
 
   def initialize(auth_token)
-    @auth= {
+    @header= {
         "Authorization" => "token #{auth_token}",
-        "User-Agent" => "HTTParty"
+        "User-Agent" => "HTTParty",
+        "Accept"    => "application/vnd.github.ironman-preview+json"
     }
   end
   def get_teams(org)
    self.class.get("/orgs/#{org}/teams",
-                 :headers => @auth)
+                 :headers => @header)
   end
+
+   def get_members(id, options={})
+     self.class.get("/teams/#{id}/members",
+                    :headers => @header,
+                    :query => options)
+   end
  end
 end
 
