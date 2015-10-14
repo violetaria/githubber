@@ -28,5 +28,10 @@ module Githubber
                       :body => {:state => "closed"}.to_json)
     end
 
+    def create_issue(owner,repo,options={})
+      self.class.post("/repos/#{owner}/#{repo}/issues",
+                      :headers => @auth,
+                      :body => options.to_json)
+    end
   end
 end
