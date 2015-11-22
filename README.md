@@ -1,38 +1,19 @@
 # Githubber
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/githubber`. To experiment with that code, run `bin/console` for an interactive prompt.
+Group project worked on by myself and another Ruby developer.  The code allows the user to interface with the Github API using HTTParty.  Program allows you to:
 
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'githubber'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install githubber
+1. Search for Teams, Members, and Gists
+2. Create Pull Requests, Get existing PR, and Check if a PR is Merged
+3. Create an Issue, List Issues, Comment on an Issue, and Close an Issue
 
 ## Usage
 
-TODO: Write usage instructions here
+You must have an Authorization token provided by Github to use this program.  To run: `bundle exec ruby lib/githubber.rb`
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/githubber. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/violetaria/githubber. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
